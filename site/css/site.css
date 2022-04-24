@@ -18,13 +18,43 @@ body {
   margin: 0;
   font-family: 'Gilroy';
   font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.01em; }
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  overflow-x: hidden; }
+
+div, p, button, a, span {
+  font-family: 'Gilroy'; }
 
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
+
+.chat {
+  position: fixed;
+  top: 98%;
+  right: 2%;
+  transform: translateY(-98%);
+  z-index: 1000;
+  transition: opacity 0.5s, transform 0.5s cubic-bezier(0.57, 1.2, 0.68, 2.6);
+  will-change: transform, opacity;
+  padding: 10px;
+  background: white;
+  border-radius: 100px; }
+
+button.connect {
+  background-color: #000000;
+  /* Green */
+  border: 1px solid white;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 50px;
+  margin-top: 30px; }
 
 .inner, .nav-panel ul .nav-btn:after {
   content: "";
@@ -49,10 +79,45 @@ body {
   height: 100%;
   transition: transform .7s, opacity .7s, z-index .7s;
   will-change: transform, opacity; }
-  .page.page-7 {
+  .page.page-8 {
     display: none; }
-    .page.page-7.active {
+    .page.page-8.active {
       display: block; }
+    .page.page-8 .info {
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 10vh;
+      width: 75vw;
+      position: absolute;
+      text-align: center;
+      color: white; }
+  .page .footer {
+    color: white;
+    text-align: center;
+    bottom: 50px;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    display: flex; }
+    .page .footer > div {
+      flex: 1; }
+      .page .footer > div:nth-child(2), .page .footer > div:nth-child(3), .page .footer > div:nth-child(4) {
+        background-color: rgba(255, 255, 255, 0.2); }
+    .page .footer .solar-icon svg {
+      margin-top: 7px;
+      transform: scale(1.4); }
+    .page .footer button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      height: 80px; }
   .page .header {
     padding: 30px;
     border-radius: 20px;
@@ -69,40 +134,61 @@ body {
     .page .header h4 {
       margin-top: 2rem;
       font-size: 1.5rem; }
+  .page .right {
+    height: 100%;
+    background-size: cover !important; }
+  .page .left {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; }
+    .page .left p {
+      margin-top: 20px; }
+    .page .left section {
+      display: flex;
+      margin-top: 10px; }
+      .page .left section label, .page .left section div {
+        flex: 1; }
   .page:nth-child(1) .first-background {
-    background-image: url("../assets/roof.jpg");
-    background-size: 100% 100%;
+    background: url("../assets/roof.jpg") no-repeat center center fixed;
     height: 100%; }
   .page:nth-child(2) {
     height: 100%; }
     .page:nth-child(2) .left {
       background: white; }
     .page:nth-child(2) .right {
-      background-image: url("../assets/house.jpg"); }
+      background: url("../assets/house.jpg") no-repeat center center fixed; }
   .page:nth-child(3) {
     height: 100%; }
     .page:nth-child(3) .left {
       background: white; }
     .page:nth-child(3) .right {
-      background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-6.jpg"); }
+      background: url("../assets/photovoltaic.jpg") no-repeat center center fixed; }
   .page:nth-child(4) {
     height: 100%; }
     .page:nth-child(4) .left {
       background: white; }
     .page:nth-child(4) .right {
-      background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-8.jpg"); }
+      background: url("../assets/man.jpg") no-repeat center center fixed; }
   .page:nth-child(5) {
     height: 100%; }
     .page:nth-child(5) .left {
       background: white; }
     .page:nth-child(5) .right {
-      background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-8.jpg"); }
+      background: url("../assets/light.jpg") no-repeat center center fixed; }
   .page:nth-child(6) {
     height: 100%; }
     .page:nth-child(6) .left {
       background: white; }
     .page:nth-child(6) .right {
-      background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-8.jpg"); }
+      background: url("../assets/app.jpeg") no-repeat center center fixed; }
+  .page:nth-child(7) {
+    height: 100%; }
+    .page:nth-child(7) .left {
+      background: white; }
+    .page:nth-child(7) .right {
+      background: url("../assets/solar-cell.jpg") no-repeat center center fixed; }
   .page.active {
     z-index: 5;
     transition: transform .7s, opacity .7s, z-index 0s .7s; }
@@ -178,16 +264,6 @@ body {
   .half.doublehalf {
     width: 70%;
     left: 30%; }
-  .half.withText:after {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 10; }
 
 .nav-panel {
   position: fixed;
@@ -250,18 +326,11 @@ body {
     .nav-panel .scroll-btn:hover {
       border-color: yellow; }
 
-.check-out {
-  z-index: 1000;
-  position: absolute;
-  bottom: 1rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  font-family: Gilroy;
-  font-size: 1rem;
-  text-transform: uppercase; }
-  .check-out a {
-    color: #ffaaaa;
-    text-decoration: none;
-    border-bottom: 0.2rem solid; }
+.margin-top-tiny {
+  margin-top: 10px; }
+
+.margin-top-small {
+  margin-top: 13px; }
+
+.icon-font {
+  font-size: 28px; }

@@ -31,6 +31,7 @@ div, p, button, a, span {
   padding: 0; }
 
 .chat {
+  cursor: pointer;
   position: fixed;
   top: 98%;
   right: 2%;
@@ -43,8 +44,7 @@ div, p, button, a, span {
   border-radius: 100px; }
 
 button.connect {
-  background-color: #000000;
-  /* Green */
+  background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid white;
   border-radius: 25px;
   color: white;
@@ -189,6 +189,9 @@ button.connect {
       background: white; }
     .page:nth-child(7) .right {
       background: url("../assets/solar-cell.jpg") no-repeat center center fixed; }
+  .page:nth-child(8) .last-background {
+    background: url("../assets/solar-energy.jpg") no-repeat center center fixed;
+    height: 100%; }
   .page.active {
     z-index: 5;
     transition: transform .7s, opacity .7s, z-index 0s .7s; }
@@ -240,12 +243,6 @@ button.connect {
     transform: translateX(-100%); }
   .page:nth-child(10) .right {
     transform: translateX(100%); }
-
-.full {
-  width: 100%;
-  height: 100%;
-  background: black;
-  color: white; }
 
 .half {
   position: absolute;
@@ -334,3 +331,125 @@ button.connect {
 
 .icon-font {
   font-size: 28px; }
+
+.big-swal {
+  width: 80vw !important; }
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap; }
+  .container-flex > label {
+    flex: 50%; }
+
+.has-float-label {
+  display: block;
+  position: relative;
+  margin-bottom: 16px; }
+  .has-float-label input, .has-float-label select {
+    width: 100%; }
+  .has-float-label .control-checkbox {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 20px;
+    margin-left: -25px; }
+  .has-float-label .control-checkbox + input {
+    pointer-events: none; }
+  .has-float-label .control-checkbox:checked + input {
+    pointer-events: all; }
+
+.has-float-label input:hover:not(:disabled):not(:focus),
+.has-float-label select:hover:not(:disabled):not(:focus) {
+  border-bottom: 2px solid #1e1e1e !important; }
+
+.has-float-label input:hover:invalid:not(:placeholder-shown):not(:focus),
+.has-float-label select:hover:invalid:not(:placeholder-shown):not(:focus) {
+  border-bottom: 2px solid #ff1744 !important; }
+
+.has-float-label input:focus,
+.has-float-label select:focus {
+  border-bottom: 2px solid #2979ff;
+  transition: all .2s; }
+
+.has-float-label input:invalid:not(:focus),
+.has-float-label select:invalid:not(:focus) {
+  border-bottom: 2px solid #ff1744; }
+
+.has-float-label input:placeholder-shown:not(:focus),
+.has-float-label select:placeholder-shown:not(:focus) {
+  border-bottom: 2px solid #8a8a8a; }
+
+/*.has-float-label input:-moz-ui-invalid {
+	border-bottom:2px solid red !important;
+}
+.has-float-label input:-moz-ui-invalid:not(:placeholder-shown) ~ .label {
+	color:red !important;
+}*/
+.has-float-label input:disabled,
+.has-float-label select:disabled {
+  border-bottom: 2px dotted #8a8a8a !important;
+  pointer-events: none;
+  background-color: inherit; }
+
+.has-float-label input, .has-float-label select {
+  font-size: inherit;
+  padding: 16px 0 8px 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: initial;
+  color: #2c2c2c;
+  caret-color: #2979ff;
+  border-bottom: 2px solid #8a8a8a; }
+
+input,
+select {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.15;
+  margin: 0;
+  outline: none; }
+
+.has-float-label input:placeholder-shown:not(:focus) + .label,
+.has-float-label select:placeholder-shown:not(:focus) + .label {
+  font-size: 16px;
+  top: 20px;
+  color: #838383; }
+
+.has-float-label label, .has-float-label > .label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: text;
+  font-size: 12px;
+  color: #6d6d6d;
+  transition: all .2s;
+  pointer-events: none; }
+
+.has-float-label input:invalid ~ .label,
+.has-float-label select:invalid ~ .label {
+  color: #ff1744; }
+
+.has-float-label input:focus ~ .label,
+.has-float-label select:focus ~ .label {
+  color: #2979ff; }
+
+.has-float-label input:invalid:not(:focus):not(:placeholder-shown) ~ .error,
+.has-float-label select:invalid:not(:focus):not(:placeholder-shown) ~ .error {
+  display: block; }
+
+.error {
+  color: #ff1744;
+  display: none; }
+
+.has-float-label input:invalid:not(:focus):not(:placeholder-shown) ~ .helper,
+.has-float-label select:invalid:not(:focus):not(:placeholder-shown) ~ .helper {
+  display: none; }
+
+.swal2-popup textarea {
+  font-family: 'Gilroy';
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  border: 1px solid #D7DADD;
+  border-radius: 6px; }

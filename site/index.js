@@ -86,4 +86,111 @@ $(document).ready(function() {
     pagination(+$(this).attr("data-target"));
   });
 
+  var handler = function() {
+    Swal.fire({
+			title: '',
+			allowOutsideClick: false,
+			showCancelButton: true,
+			cancelButtonColor: '#d33',
+			cancelButtonText: 'Откажи',
+			reverseButtons: true,
+      html: `
+        <h2>Връзка с нас</h2>
+        <label class="has-float-label">
+          <input onClick="this.select();" id="name" placeholder=" " type="text" required="required" value="">
+          <span class="label">Име *</span>
+        </label>
+        <label class="has-float-label">
+          <input onClick="this.select();" id="phone" placeholder=" " type="text" required="required">
+          <span class="label">Телефон *</span>
+        </label>
+        <label class="has-float-label">
+          <input onClick="this.select();" id="email" placeholder=" " type="text" required="required">
+          <span class="label">Емайл *</span>
+        </label>
+        <label class="has-float-label">
+          <textarea onClick="this.select();" id="message" placeholder="Съобщение"required="required"></textarea>
+        </label>
+
+      `,
+			focusConfirm: false,
+			confirmButtonText: 'Изпрати',
+			confirmButtonColor: '#28a745',
+      showLoaderOnConfirm: true,
+      preConfirm: (login) => {
+				const data = [
+					document.getElementById('name').value,
+					document.getElementById('phone').value,
+					document.getElementById('email').value,
+					document.getElementById('message').value
+				];
+        data[0].style='';
+        data[1].style='';
+        data[2].style='';
+				if(!data[0].length) {
+					Swal.showValidationMessage(
+						`Вашето име е задължително поле`
+					);
+					let element = document.getElementById('name');
+					element.style='border-color: red;';
+					return false;
+				}
+				if(!data[1].length) {
+					Swal.showValidationMessage(
+						`Вашият телефонен номер е задължително поле`
+					);
+					let element = document.getElementById('phone');
+					element.style='border-color: red;';
+					return false;
+				}
+				if(!data[2].length) {
+					Swal.showValidationMessage(
+						`Вашият емайл е задължително поле`
+					);
+					let element = document.getElementById('email');
+					element.style='border-color: red;';
+					return false;
+				}
+        return fetch(
+          `https://www.jilanov.com/api/message`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: data[0],
+              phone: data[1],
+              email: data[2],
+              message: 'ПАНЕЛИ: ' + data[3],
+            })
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(response.statusText)
+            }
+            return response.json()
+          })
+          .catch(error => {
+            Swal.showValidationMessage(
+              `Request failed: ${error}`
+            )
+          })
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Изпратено успешно!',
+          text: 'Ще се свържем с вас',
+          showConfirmButton: false,
+          timer: 2500
+        });
+      }
+    })
+  }
+
+  $(document).on("click", ".chat", handler);
+  $(document).on("click", ".connect", handler);
+
 });

@@ -8,9 +8,6 @@
     "grunt-contrib-cssmin": "2.2.1",
     "grunt-contrib-watch": "1.1.0"
   },
-  "engines": {
-    "node": "^8.9.1"
-  },
   "dependencies": {
     "grunt-sass": "^2.1.0",
     "node-sass": "^4.9.0",

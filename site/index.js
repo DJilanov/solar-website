@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  
   var pages = $(".page").length,
       scrolling = false,
       curPage = 1;
@@ -53,15 +52,15 @@ $(document).ready(function() {
     }
   }
   
-  $(document).on("mousewheel DOMMouseScroll", function(e) {
-    if (!scrolling) {
-      if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
-        navigateUp();
-      } else { 
-        navigateDown();
-      }
-    }
-  });
+  // $(document).on("mousewheel DOMMouseScroll", function(e) {
+  //   if (!scrolling) {
+  //     if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+  //       navigateUp();
+  //     } else { 
+  //       navigateDown();
+  //     }
+  //   }
+  // });
   
   $(document).on("click", ".scroll-btn", function() {
     if (scrolling) return;

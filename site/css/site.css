@@ -44,6 +44,7 @@ div, p, button, a, span {
   border-radius: 100px; }
 
 button.connect {
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid white;
   border-radius: 25px;
@@ -453,3 +454,55 @@ select {
   padding: 15px;
   border: 1px solid #D7DADD;
   border-radius: 6px; }
+
+@media only screen and (max-width: 1024px) {
+  .page {
+    height: auto;
+    position: relative;
+    flex-direction: column; }
+    .page .half {
+      width: 100%; }
+    .page .header {
+      text-shadow: 2px 2px black;
+      width: 90vw;
+      margin-top: 2vh; }
+    .page .footer {
+      text-shadow: 2px 2px black;
+      bottom: 60px;
+      height: 90px; }
+      .page .footer div:first-child,
+      .page .footer div:last-child {
+        flex: 0.1; }
+    .page.page-7 {
+      margin-top: 60px;
+      margin-bottom: 60px; }
+    .page.page-8 {
+      display: block; }
+  .nav-panel {
+    display: none; }
+  .half {
+    position: relative; }
+  .page:nth-child(2),
+  .page:nth-child(3),
+  .page:nth-child(4),
+  .page:nth-child(5),
+  .page:nth-child(6),
+  .page:nth-child(7) {
+    display: flex; }
+  .page:nth-child(2) .left,
+  .page:nth-child(3) .left,
+  .page:nth-child(4) .left,
+  .page:nth-child(5) .left,
+  .page:nth-child(6) .left,
+  .page:nth-child(7) .left {
+    transform: none;
+    flex: 1; }
+  .page:nth-child(2) .right,
+  .page:nth-child(3) .right,
+  .page:nth-child(4) .right,
+  .page:nth-child(5) .right,
+  .page:nth-child(6) .right,
+  .page:nth-child(7) .right {
+    transform: none;
+    flex: 2;
+    left: 0; } }

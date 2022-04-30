@@ -137,7 +137,11 @@ button.connect {
       font-size: 1.5rem; }
   .page .right {
     height: 100%;
-    background-size: cover !important; }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll; }
   .page .left {
     padding: 40px;
     display: flex;
@@ -152,46 +156,46 @@ button.connect {
       .page .left section label, .page .left section div {
         flex: 1; }
   .page:nth-child(1) .first-background {
-    background: url("../assets/roof.jpg") no-repeat center center fixed;
+    background-image: url("../assets/roof.jpg");
     height: 100%; }
   .page:nth-child(2) {
     height: 100%; }
     .page:nth-child(2) .left {
       background: white; }
     .page:nth-child(2) .right {
-      background: url("../assets/house.jpg") no-repeat center center fixed; }
+      background-image: url("../assets/house.jpg"); }
   .page:nth-child(3) {
     height: 100%; }
     .page:nth-child(3) .left {
       background: white; }
     .page:nth-child(3) .right {
-      background: url("../assets/photovoltaic.jpg") no-repeat center center fixed; }
+      background-image: url("../assets/photovoltaic.jpg"); }
   .page:nth-child(4) {
     height: 100%; }
     .page:nth-child(4) .left {
       background: white; }
     .page:nth-child(4) .right {
-      background: url("../assets/man.jpg") no-repeat center center fixed; }
+      background-image: url("../assets/man.jpg"); }
   .page:nth-child(5) {
     height: 100%; }
     .page:nth-child(5) .left {
       background: white; }
     .page:nth-child(5) .right {
-      background: url("../assets/light.jpg") no-repeat center center fixed; }
+      background-image: url("../assets/light.jpg"); }
   .page:nth-child(6) {
     height: 100%; }
     .page:nth-child(6) .left {
       background: white; }
     .page:nth-child(6) .right {
-      background: url("../assets/app.jpeg") no-repeat center center fixed; }
+      background-image: url("../assets/app.jpeg"); }
   .page:nth-child(7) {
     height: 100%; }
     .page:nth-child(7) .left {
       background: white; }
     .page:nth-child(7) .right {
-      background: url("../assets/solar-cell.jpg") no-repeat center center fixed; }
+      background-image: url("../assets/solar-cell.jpg"); }
   .page:nth-child(8) .last-background {
-    background: url("../assets/solar-energy.jpg") no-repeat center center fixed;
+    background-image: url("../assets/solar-energy.jpg");
     height: 100%; }
   .page.active {
     z-index: 5;
@@ -503,6 +507,7 @@ select {
   .page:nth-child(5) .right,
   .page:nth-child(6) .right,
   .page:nth-child(7) .right {
-    transform: none;
+    height: 100vw;
+    transform: initial;
     flex: 2;
     left: 0; } }

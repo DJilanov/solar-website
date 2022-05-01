@@ -555,3 +555,7 @@ select {
     transform: initial;
     flex: 2;
     left: 0; } }
+
+.lazy {
+  background-image: none !important;
+  background-color: #F1F1FA; }

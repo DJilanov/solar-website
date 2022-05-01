@@ -112,7 +112,8 @@ button.connect {
       width: 75vw;
       position: absolute;
       text-align: center;
-      color: white; }
+      color: white;
+      text-shadow: 2px 2px black; }
   .page .footer {
     color: white;
     text-align: center;

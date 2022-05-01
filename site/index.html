@@ -6,6 +6,28 @@
         <link rel="stylesheet" href="./css/site.css?V1">
     </head>
     <body>
+        <script>
+            if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+            // if(true) {
+                document.body.className = document.body.className + ' mobile';
+            }
+        </script>
+        <script>
+            function testWebP() {
+              return new Promise(res => {
+                  const webP = new Image();
+                  webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+                  webP.onload = webP.onerror = () => {
+                      res(webP.height === 2);
+                  };        
+              })
+            };
+            testWebP().then(hasWebP => {
+                if(!hasWebP) {
+                    document.body.className = document.body.className + ' noWEBP';
+                }
+            });
+        </script>
         <div class="scene">
             <div class="page page-1 active">
                 <div class="logo">

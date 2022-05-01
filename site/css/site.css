@@ -176,46 +176,46 @@ button.connect {
       .page .left section label, .page .left section div {
         flex: 1; }
   .page:nth-child(1) .first-background {
-    background-image: url("../assets/roof.webp");
+    background-image: url("../assets/web/roof.webp");
     height: 100%; }
   .page:nth-child(2) {
     height: 100%; }
     .page:nth-child(2) .left {
       background: white; }
     .page:nth-child(2) .right {
-      background-image: url("../assets/groundpanels2.webp"); }
+      background-image: url("../assets/web/groundpanels2.webp"); }
   .page:nth-child(3) {
     height: 100%; }
     .page:nth-child(3) .left {
       background: white; }
     .page:nth-child(3) .right {
-      background-image: url("../assets/house.webp"); }
+      background-image: url("../assets/web/house.webp"); }
   .page:nth-child(4) {
     height: 100%; }
     .page:nth-child(4) .left {
       background: white; }
     .page:nth-child(4) .right {
-      background-image: url("../assets/solarpanel-gb0669ea35.webp"); }
+      background-image: url("../assets/web/solarpanel-gb0669ea35.webp"); }
   .page:nth-child(5) {
     height: 100%; }
     .page:nth-child(5) .left {
       background: white; }
     .page:nth-child(5) .right {
-      background-image: url("../assets/light.webp"); }
+      background-image: url("../assets/web/light.webp"); }
   .page:nth-child(6) {
     height: 100%; }
     .page:nth-child(6) .left {
       background: white; }
     .page:nth-child(6) .right {
-      background-image: url("../assets/app.webp"); }
+      background-image: url("../assets/web/app.webp"); }
   .page:nth-child(7) {
     height: 100%; }
     .page:nth-child(7) .left {
       background: white; }
     .page:nth-child(7) .right {
-      background-image: url("../assets/perc-solar.webp"); }
+      background-image: url("../assets/web/perc-solar.webp"); }
   .page:nth-child(8) .last-background {
-    background-image: url("../assets/solar-energy.webp");
+    background-image: url("../assets/web/solar-energy.webp");
     height: 100%; }
   .page.active {
     z-index: 5;
@@ -270,28 +270,86 @@ button.connect {
     transform: translateX(100%); }
 
 .noWEBP .page:nth-child(1) .first-background {
-  background-image: url("../assets/roof.jpg"); }
+  background-image: url("../assets/web/roof.jpg"); }
 
 .noWEBP .page:nth-child(2) .right {
-  background-image: url("../assets/groundpanels2.jpg"); }
+  background-image: url("../assets/web/groundpanels2.jpg"); }
 
 .noWEBP .page:nth-child(3) .right {
-  background-image: url("../assets/house.jpg"); }
+  background-image: url("../assets/web/house.jpg"); }
 
 .noWEBP .page:nth-child(4) .right {
-  background-image: url("../assets/solarpanel-gb0669ea35.jpg"); }
+  background-image: url("../assets/web/solarpanel-gb0669ea35.jpg"); }
 
 .noWEBP .page:nth-child(5) .right {
-  background-image: url("../assets/app.jpeg"); }
+  background-image: url("../assets/web/light.jpeg"); }
 
 .noWEBP .page:nth-child(6) .right {
-  background-image: url("../assets/app.jpeg"); }
+  background-image: url("../assets/web/app.jpeg"); }
 
 .noWEBP .page:nth-child(7) .right {
-  background-image: url("../assets/perc-solar.jpeg"); }
+  background-image: url("../assets/web/perc-solar.jpeg"); }
 
 .noWEBP .page:nth-child(8) .last-background {
-  background-image: url("../assets/solar-energy.jpg"); }
+  background-image: url("../assets/web/solar-energy.jpg"); }
+
+.noWEBP.mobile .page:nth-child(1) .first-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-image: url("../assets/mobile/roof.jpg"); }
+
+.noWEBP.mobile .page:nth-child(2) .right {
+  background-image: url("../assets/mobile/groundpanels2.jpg"); }
+
+.noWEBP.mobile .page:nth-child(3) .right {
+  background-image: url("../assets/mobile/house.jpg"); }
+
+.noWEBP.mobile .page:nth-child(4) .right {
+  background-image: url("../assets/mobile/solarpanel-gb0669ea35.jpg"); }
+
+.noWEBP.mobile .page:nth-child(5) .right {
+  background-image: url("../assets/mobile/light.jpeg"); }
+
+.noWEBP.mobile .page:nth-child(6) .right {
+  background-image: url("../assets/mobile/app.jpeg"); }
+
+.noWEBP.mobile .page:nth-child(7) .right {
+  background-image: url("../assets/mobile/perc-solar.jpeg"); }
+
+.noWEBP.mobile .page:nth-child(8) .last-background {
+  background-image: url("../assets/mobile/solar-energy.jpg"); }
+
+.mobile .page:nth-child(1) .first-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-image: url("../assets/mobile/roof.webp"); }
+
+.mobile .page:nth-child(2) .right {
+  background-image: url("../assets/mobile/groundpanels2.webp"); }
+
+.mobile .page:nth-child(3) .right {
+  background-image: url("../assets/mobile/house.webp"); }
+
+.mobile .page:nth-child(4) .right {
+  background-image: url("../assets/mobile/solarpanel-gb0669ea35.webp"); }
+
+.mobile .page:nth-child(5) .right {
+  background-image: url("../assets/mobile/light.webp"); }
+
+.mobile .page:nth-child(6) .right {
+  background-image: url("../assets/mobile/app.webp"); }
+
+.mobile .page:nth-child(7) .right {
+  background-image: url("../assets/mobile/perc-solar.webp"); }
+
+.mobile .page:nth-child(8) .last-background {
+  background-image: url("../assets/mobile/solar-energy.webp"); }
 
 .half {
   position: absolute;

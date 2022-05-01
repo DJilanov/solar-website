@@ -322,12 +322,15 @@ button.connect {
 .noWEBP.mobile .page:nth-child(8) .last-background {
   background-image: url("../assets/mobile/solar-energy.jpg"); }
 
-.mobile .page:nth-child(1) .first-background {
+.first-background,
+.last-background {
   background-size: cover;
   background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: scroll;
+  background-attachment: scroll; }
+
+.mobile .page:nth-child(1) .first-background {
   background-image: url("../assets/mobile/roof.webp"); }
 
 .mobile .page:nth-child(2) .right {

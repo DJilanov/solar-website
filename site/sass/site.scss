@@ -418,14 +418,18 @@ button.connect {
   }
 }
 
+.first-background,
+.last-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll; 
+}
+
 .mobile .page {
   &:nth-child(1) {
     .first-background {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: scroll; 
       background-image: url('../assets/mobile/roof.webp');
     }
   }

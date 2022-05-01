@@ -193,7 +193,7 @@ button.connect {
     .page:nth-child(7) .left {
       background: white; }
     .page:nth-child(7) .right {
-      background-image: url("../assets/solar-cell.jpg"); }
+      background-image: url("../assets/perc-solar.jpeg"); }
   .page:nth-child(8) .last-background {
     background-image: url("../assets/solar-energy.jpg");
     height: 100%; }

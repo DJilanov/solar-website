@@ -206,7 +206,7 @@ function testWebP() {
 };
 
 testWebP().then(hasWebP => {
-  if(hasWebP) {
-    document.body.className = 'hasWEBP';
+  if(!hasWebP) {
+    document.body.className = 'noWEBP';
   }
 });

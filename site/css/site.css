@@ -32,7 +32,7 @@ div, p, button, a, span {
 
 .download {
   cursor: pointer;
-  margin-top: 60px;
+  margin: 60px auto;
   background: #323543;
   color: #fff;
   display: block;

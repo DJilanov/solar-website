@@ -177,7 +177,7 @@ button.connect {
         flex: 1; }
   .page:nth-child(1) .first-background {
     background-image: url("../assets/web/roof.webp");
-    height: 100%; }
+    height: 100vh; }
   .page:nth-child(2) {
     height: 100%; }
     .page:nth-child(2) .left {

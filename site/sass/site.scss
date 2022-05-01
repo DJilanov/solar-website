@@ -185,7 +185,7 @@ button.connect {
       font-size: 2.5rem;
     }
 
-    h4 {
+    h3 {
       font-size: 1.5rem;
     }
   }
@@ -430,6 +430,7 @@ button.connect {
 .mobile .page {
   &:nth-child(1) {
     .first-background {
+      min-height: 100vh;
       background-image: url('../assets/mobile/roof.webp');
     }
   }
@@ -467,6 +468,7 @@ button.connect {
   
   &:nth-child(8) {
     .last-background {
+      min-height: 100vh;
       background-image: url('../assets/mobile/solar-energy.webp');
     }
   }
@@ -751,7 +753,7 @@ select {
 
 @media only screen and (max-width: 1024px) {
   .page {
-    height: auto;
+    min-height: 100vh;
     position: relative;
     flex-direction: column;
 

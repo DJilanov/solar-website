@@ -153,7 +153,7 @@ button.connect {
     .page .header h2 {
       margin-top: 2rem;
       font-size: 2.5rem; }
-    .page .header h4 {
+    .page .header h3 {
       font-size: 1.5rem; }
   .page .right {
     height: 100%;
@@ -331,6 +331,7 @@ button.connect {
   background-attachment: scroll; }
 
 .mobile .page:nth-child(1) .first-background {
+  min-height: 100vh;
   background-image: url("../assets/mobile/roof.webp"); }
 
 .mobile .page:nth-child(2) .right {
@@ -353,6 +354,7 @@ button.connect {
   background-image: url("../assets/mobile/perc-solar.webp"); }
 
 .mobile .page:nth-child(8) .last-background {
+  min-height: 100vh;
   background-image: url("../assets/mobile/solar-energy.webp"); }
 
 .half {
@@ -567,7 +569,7 @@ select {
 
 @media only screen and (max-width: 1024px) {
   .page {
-    height: auto;
+    min-height: 100vh;
     position: relative;
     flex-direction: column; }
     .page .half {

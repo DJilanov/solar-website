@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="bg">
     <head>
         <base href="/">
@@ -73,7 +74,7 @@
                 <div class="first-background withText">
                     <div class="header">
                         <h2 class="heading">Най-добрата цена за панел по новата PERC технология</h2>
-                        <h4>12 години гаранция от производителя!</h4>
+                        <h3>12 години гаранция от производителя!</h3>
                     </div>
                     <div class="footer">
                         <div></div>
@@ -223,5 +224,12 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="./index.min.js?V1"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register('/sw.js')
+                    .then(() => { console.log('Service Worker Registered'); });
+            }
+        </script>
     </body>
 </html>

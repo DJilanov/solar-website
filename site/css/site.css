@@ -269,6 +269,30 @@ button.connect {
   .page:nth-child(10) .right {
     transform: translateX(100%); }
 
+.hasWEBP .page:nth-child(1) .first-background {
+  background-image: url("../assets/roof.webp"); }
+
+.hasWEBP .page:nth-child(2) .right {
+  background-image: url("../assets/groundpanels2.webp"); }
+
+.hasWEBP .page:nth-child(3) .right {
+  background-image: url("../assets/house.webp"); }
+
+.hasWEBP .page:nth-child(4) .right {
+  background-image: url("../assets/solarpanel-gb0669ea35.webp"); }
+
+.hasWEBP .page:nth-child(5) .right {
+  background-image: url("../assets/light.webp"); }
+
+.hasWEBP .page:nth-child(6) .right {
+  background-image: url("../assets/app.webp"); }
+
+.hasWEBP .page:nth-child(7) .right {
+  background-image: url("../assets/perc-solar.webp"); }
+
+.hasWEBP .page:nth-child(8) .last-background {
+  background-image: url("../assets/solar-energy.webp"); }
+
 .half {
   position: absolute;
   top: 0;

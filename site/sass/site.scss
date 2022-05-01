@@ -100,6 +100,7 @@ button.connect {
   width: 100%;
   height: 100%;
 }
+
 .page {
   z-index: 1;
   position: absolute;
@@ -324,6 +325,51 @@ button.connect {
     }
   }
 }
+
+.hasWEBP .page {
+  &:nth-child(1) {
+    .first-background {
+      background-image: url('../assets/roof.webp');
+    }
+  }
+  &:nth-child(2) {
+    .right {
+      background-image: url('../assets/groundpanels2.webp');
+    }
+  }
+  &:nth-child(3) {
+    .right {
+      background-image: url('../assets/house.webp');
+    }
+  }
+  &:nth-child(4) {
+    .right {
+      background-image: url('../assets/solarpanel-gb0669ea35.webp');
+    }
+  }
+  &:nth-child(5) {
+    .right {
+      background-image: url('../assets/light.webp');
+    }
+  }
+  &:nth-child(6) {
+    .right {
+      background-image: url('../assets/app.webp');
+    }
+  }
+  &:nth-child(7) {
+    .right {
+      background-image: url('../assets/perc-solar.webp');
+    }
+  }
+  
+  &:nth-child(8) {
+    .last-background {
+      background-image: url('../assets/solar-energy.webp');
+    }
+  }
+}
+
 .half {
   position: absolute;
   top: 0;

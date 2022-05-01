@@ -9,7 +9,11 @@
         <div class="scene">
             <div class="page page-1 active">
                 <div class="logo">
-                    <img src="./assets/logo-trans.png" width="100" height="100">
+                    <picture width="100" height="100">
+                        <source srcset="./assets/logo-trans.webp" type="image/webp">
+                        <source srcset="./assets/logo-trans.jpg" type="image/jpeg"> 
+                        <img src="./assets/logo-trans.jpg" width="100" height="100">
+                    </picture>
                 </div>
                 <div class="first-background withText">
                     <div class="header">
@@ -161,7 +165,7 @@
         <div class="chat">
             <svg width="28" height="26" xmlns="http://www.w3.org/2000/svg" class="tw-chat--avaya-chat__image"><g fill="#171A20"><path d="M23.8.85H4.2A3.85 3.85 0 00.35 4.7v12.6l.007.235A3.85 3.85 0 004.2 21.15h3.15v2.859c0 .332.117.653.33.907l.122.13c.515.478 1.317.51 1.87.047l4.709-3.943H23.8a3.85 3.85 0 003.85-3.85V4.7A3.85 3.85 0 0023.8.85zM4.2 2.95h19.6c.966 0 1.75.784 1.75 1.75v12.6a1.75 1.75 0 01-1.75 1.75h-9.927a.7.7 0 00-.45.163L9.45 22.54v-2.79a.7.7 0 00-.7-.7H4.2a1.75 1.75 0 01-1.75-1.75V4.7c0-.966.784-1.75 1.75-1.75z"></path><path d="M14 9.6a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8zm-5.6 0a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8zm11.2 0a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8z"></path></g></svg>
         </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="./index.js?V1"></script>
     </body>

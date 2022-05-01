@@ -349,6 +349,7 @@ button.connect {
   background-image: url("../assets/mobile/app.webp"); }
 
 .mobile .page:nth-child(7) .right {
+  display: none;
   background-image: url("../assets/mobile/perc-solar.webp"); }
 
 .mobile .page:nth-child(8) .last-background {

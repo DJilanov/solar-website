@@ -460,6 +460,7 @@ button.connect {
   }
   &:nth-child(7) {
     .right {
+      display: none;
       background-image: url('../assets/mobile/perc-solar.webp');
     }
   }

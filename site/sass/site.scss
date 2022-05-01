@@ -34,6 +34,27 @@ div, p, button, a, span {
   padding: 0;
 }
 
+.download {
+  cursor: pointer;
+  margin-top: 60px;
+  background: #323543;
+  color: #fff;
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: 'Arial',Verdana,sans-serif;
+  height: 80px;
+  line-height: 25px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  position: relative;
+  z-index: 2;
+  transition: 350ms;
+}
+
 .chat {
   cursor: pointer;
   position: fixed;
